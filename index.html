@@ -33,16 +33,17 @@
     margin: 20px;
   }
 </style>
+
 <body>
   <div id="app">
-      <mx-button>
-          按钮
-      </mx-button>
-    <mx-button icon="setting" icon-position="right">
+    <mx-button :loading="loading1" @click="loading1=!loading1">
+      按钮
+    </mx-button>
+    <mx-button icon="setting" icon-position="right" :loading="loading2" @click="loading2=!loading2">
       按钮
     </mx-button>
     <mx-button icon="setting">
-        按钮
+      按钮
     </mx-button>
   </div>
   <script src="./src/app.js"></script>

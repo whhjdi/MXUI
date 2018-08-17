@@ -6,4 +6,10 @@ Vue.component('mx-button',Button)
 Vue.component('mx-icon',Icon)
 new Vue({
   el:'#app',
+  data:{
+    loading1:false,
+    loading2:true
+  },
+  methods:{
+  }
 })
