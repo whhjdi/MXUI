@@ -1,34 +1,31 @@
 <template>
-		<button class="mx-button" :class="{[`icon-${iconPosition}`]:true}"
-		@click="$emit('click')">
-			<mx-icon v-if="icon&&!loading" :name="icon" class="icon"></mx-icon>
-			<mx-icon name="loading" class="loading icon" v-if="loading"></mx-icon>
-			<div class="content">
-				<slot></slot>
-			</div>
-		</button>
+	<button class="mx-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+		<mx-icon v-if="icon&&!loading" :name="icon" class="icon"></mx-icon>
+		<mx-icon name="loading" class="loading icon" v-if="loading"></mx-icon>
+		<div class="content">
+			<slot></slot>
+		</div>
+	</button>
 </template>
 
 <script>
 export default {
-	props:{
-		icon:{},
-		iconPosition:{
-			type:String,
-			default:'left',
-			validator(value){
-				return !(value!=='left' && value!=='right')
+	props: {
+		icon: {},
+		iconPosition: {
+			type: String,
+			default: 'left',
+			validator(value) {
+				return !(value !== 'left' && value !== 'right')
 			}
 		},
-		loading:{
-			type:Boolean,
-			default:false
+		loading: {
+			type: Boolean,
+			default: false
 		}
 	},
 	data() {
-		return {
-
-		}
+		return {}
 	},
 	methods: {},
 	components: {}
@@ -56,31 +53,34 @@ export default {
 	&:focus {
 		outline: none;
 	}
-	>.icon{
-		order:1;
+	> .icon {
+		order: 1;
 		margin-left: 0;
 		margin-right: 0.2em;
 	}
-	>.content{
-		order:2;
+	> .content {
+		order: 2;
 	}
-	&.icon-right{
-		>.icon{
-			order:2;
+	&.icon-right {
+		> .icon {
+			order: 2;
 			margin-right: 0;
 			margin-left: 0.2em;
 		}
-		>.content{
-			order:1;
+		> .content {
+			order: 1;
 		}
 	}
-	.loading{
+	.loading {
 		animation: spin 1s infinite linear;
 	}
 }
 @keyframes spin {
-	0%{transform: rotate(0);}
-	100%{transform:rotate(360deg);}
-
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 </style>
