@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
   <title>MXUI</title>
 </head>
 <style>
-  *{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  :root{
+
+  :root {
     --button-height: 32px;
     --button-bg: white;
     --button-active-bg: #eee;
@@ -22,17 +24,29 @@
     --border-color: #999;
     --border-color-hover: #666;
   }
+
   body {
-     font-size: var(--font-size);
-   }
-   #app {
-     margin: 20px;
-   }
+    font-size: var(--font-size);
+  }
+
+  #app {
+    margin: 20px;
+  }
 </style>
 <body>
   <div id="app">
-    <mx-button>按钮</mx-button>
+      <mx-button>
+          按钮
+      </mx-button>
+    <mx-button icon="setting" icon-position="right">
+      按钮
+    </mx-button>
+    <mx-button icon="setting">
+        按钮
+    </mx-button>
   </div>
-<script src="./src/app.js"></script>
+  <script src="./src/app.js"></script>
+  <script src="//at.alicdn.com/t/font_797312_nb7sjtct8y.js"></script>
 </body>
+
 </html>
