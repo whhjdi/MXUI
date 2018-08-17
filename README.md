@@ -18,3 +18,8 @@ props:{
 	}
 ```
 2. 巧用flex的order,改变图标和文字的顺序
+3. 解决相邻button的border问题
+```css
+	margin-left:-1;
+	&:hover{z-index:1;}
+```
