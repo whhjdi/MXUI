@@ -1,0 +1,23 @@
+{
+  "name": "mxui",
+  "version": "1.0.0",
+  "description": "我的UI组件项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whhjdi/MXUI.git"
+  },
+  "keywords": [
+    "vue",
+    "UI"
+  ],
+  "author": "沐雪",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whhjdi/MXUI/issues"
+  },
+  "homepage": "https://github.com/whhjdi/MXUI#readme"
+}
