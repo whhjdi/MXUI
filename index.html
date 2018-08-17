@@ -29,36 +29,10 @@
      margin: 20px;
    }
 </style>
-<style>
-    .mx-button {
-      height: var(--button-height);
-      padding: 0 1em;
-      font: inherit;
-      border-radius: var(--border-radius);
-      border: 1px solid var(--border-color);
-      background: var(--button-bg);
-    }
-    .mx-button:hover {
-      border-color: var(--border-color-hover);
-    }
-    .mx-button:active {
-      background: var(--button-active-bg);
-    }
-    .mx-button:focus {
-      outline: none;
-    }
-  </style>
 <body>
   <div id="app">
     <mx-button>按钮</mx-button>
   </div>
-  <script src="./node_modules/vue/dist/vue.min.js"></script>
-  <script src="./button.js"></script>
-  <script>
-    new Vue({
-      el:'#app',
-
-    })
-  </script>
+<script src="./src/app.js"></script>
 </body>
 </html>
