@@ -1,6 +1,7 @@
 <template>
 		<button class="mx-button" :class="{[`icon-${iconPosition}`]:true}">
 			<mx-icon v-if="icon" :name="icon" class="icon"></mx-icon>
+			<mx-icon name="loading" class="loading"></mx-icon>
 			<div class="content">
 				<slot></slot>
 			</div>
@@ -68,5 +69,13 @@ export default {
 			order:1;
 		}
 	}
+	.loading{
+		animation: spin 1s infinite linear;
+	}
+}
+@keyframes spin {
+	0%{transform: rotate(0);}
+	100%{transform:rotate(360deg);}
+
 }
 </style>
