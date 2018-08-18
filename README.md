@@ -1,7 +1,41 @@
 # MXUI
 我的UI组件项目-沐雪UI(MXUI)
+[![Build Status](https://www.travis-ci.org/whhjdi/MXUI.svg?branch=master)](https://www.travis-ci.org/whhjdi/MXUI)
 
-作者: 沐雪
+## 介绍
+
+## 开始使用
+1. 
+
+## 文档
+
+## 提问
+
+## 变更记录
+
+## 联系方式
+
+## 贡献代码
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 笔记
 1. props的对象写法
