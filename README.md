@@ -24,4 +24,4 @@ props:{
 	&:hover{z-index:1;}
 ```
 4. TDD(测试驱动开发),BDD(行为驱动开发),Assert
-5. 
+5. chaijs
