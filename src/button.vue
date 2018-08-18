@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import Icon from './icon'
 export default {
 	props: {
 		icon: {},
@@ -28,7 +29,9 @@ export default {
 		return {}
 	},
 	methods: {},
-	components: {}
+	components: {
+		'mx-icon':Icon
+	}
 }
 </script>
 
