@@ -1,11 +1,40 @@
 # MXUI
-我的UI组件项目-沐雪UI(MXUI)
+
 [![Build Status](https://www.travis-ci.org/whhjdi/MXUI.svg?branch=master)](https://www.travis-ci.org/whhjdi/MXUI)
 
 ## 介绍
 
+我的UI组件项目-沐雪UI(MXUI)
+
 ## 开始使用
-1. 
+1. 添加css样式
+	请在css中使用border-box
+	```css
+	*,*::before,*::after{
+		box-sizing: border-box;
+	}
+	```
+	```css
+	:root {
+			--button-height: 32px;
+			--button-bg: white;
+			--button-active-bg: #eee;
+			--font-size: 14px;
+			--border-radius: 4px;
+			--color: #333;
+			--border-color: #999;
+			--border-color-hover: #666;
+		}
+	```
+2. 安装 mxvui
+```
+npm i mxvui
+```
+3. 引入并注册组件
+```
+
+```
+4. 引入svg
 
 ## 文档
 
