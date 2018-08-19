@@ -6,6 +6,7 @@
 
 <script>
 export default {
+	name:'mx-button-group',
 	data() {
 		return {}
 	},
