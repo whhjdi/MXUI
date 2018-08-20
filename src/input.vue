@@ -1,15 +1,15 @@
 <template>
-  <div class="wrapper" :class="{'error':error}">
-    <input type="text" :value="value" :disabled="disabled" :readonly="readonly"
-		@change="$emit('change',$event)"
-		@input="$emit('input',$event)"
-		@focus="$emit('focus',$event)"
-		@blur="$emit('blur',$event)">
-    <template v-if="error">
-      <mx-icon name="error" class="icon-error"></mx-icon>
-      <span class="error-message">{{error}}</span>
-    </template>
-  </div>
+	<div class="wrapper" :class="{'error':error}">
+		<input type="text" :value="value" :disabled="disabled" :readonly="readonly" 
+		@change="$emit('change',$event.target.value)" 
+		@input="$emit('input',$event.target.value)" 
+		@focus="$emit('focus',$event.target.value)" 
+		@blur="$emit('blur',$event.target.value)">
+		<template v-if="error">
+			<mx-icon name="error" class="icon-error"></mx-icon>
+			<span class="error-message">{{error}}</span>
+		</template>
+	</div>
 </template>
 
 <script>
@@ -35,7 +35,11 @@ export default {
 	data() {
 		return {}
 	},
-	methods: {},
+	methods: {
+		inputChange(e) {
+			console.log(e)
+		}
+	},
 	components: {
 		'mx-icon': Icon
 	}
@@ -53,11 +57,10 @@ $red: #f1453d;
 .wrapper {
 	font-size: $font-size;
 	display: inline-flex;
-  align-items:center;
-  >:not(:last-child){
-    margin-right: 0.5em;
-
-  }
+	align-items: center;
+	> :not(:last-child) {
+		margin-right: 0.5em;
+	}
 	&.error {
 		> input {
 			border-color: $red;
@@ -83,11 +86,11 @@ $red: #f1453d;
 			cursor: not-allowed;
 		}
 	}
-  .icon-error{
-    fill: $red;
-  }
-  .error-message{
-    color:$red;
-  }
+	.icon-error {
+		fill: $red;
+	}
+	.error-message {
+		color: $red;
+	}
 }
 </style>
