@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import viewButton from './views/viewButton.vue'
-import viewInput from './views/viewInput.vue'
-
+import ViewButton from './views/ViewButton.vue'
+import ViewInput from './views/ViewInput.vue'
+import ViewTabs from './views/ViewTabs.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -10,12 +10,17 @@ export default new Router({
     {
       path: '/',
       name: 'button',
-      component: viewButton
+      component: ViewButton
     },
     {
       path: '/input',
       name: 'input',
-      component: viewInput
+      component: ViewInput
+    },
+    {
+      path: '/tabs',
+      name: 'tabs',
+      component: ViewTabs
     },
     // {
     //   path: '/about',
