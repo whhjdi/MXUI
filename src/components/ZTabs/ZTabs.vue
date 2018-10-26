@@ -4,30 +4,39 @@
   </div>
 </template>
 <script>
-import Vue from 'vue'
-export default {
-  props:{
-    selected:{
-      type:String,
-      required:true
+  import Vue from "vue";
+  export default {
+      name:'ZTabs',
+    props: {
+      selected: {
+        type: String,
+        required: true
+      }
+    },
+    data() {
+      return {
+        eventBus: new Vue()
+      };
+    },
+    provide() {
+      return { eventBus: this.eventBus };
+    },
+    mounted() {
+      this.$children.forEach(vm => {
+        if (vm.$options.name === "ZTabsHead") {
+          vm.$children.forEach(childVm => {
+              if(childVm.$options.name==="ZTabsItem"&&childVm.name===this.selected){
+                  this.eventBus.$emit('update:selected',this.selected,childVm)
+              };
+          });
+        }
+      });
     }
-  },
-  data () {
-    return {
-      eventBus:new Vue()
-    }
-  },
-  provide(){
-    return {eventBus:this.eventBus}
-  },
-  created(){
-
-  }
-}
+  };
 </script>
 <style lang="scss" scoped>
-.z-tabs{
-  display: flex;
-  
-}
+  .z-tabs {
+    display: flex;
+    flex-direction: column;
+  }
 </style>

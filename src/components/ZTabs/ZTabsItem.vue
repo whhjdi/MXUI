@@ -6,6 +6,7 @@
 </template>
 <script>
   export default {
+    name:'ZTabsItem',
     inject: ["eventBus"],
     props: {
       name: {
@@ -25,7 +26,7 @@
         };
       }
     },
-    created() {
+    mounted() {
       this.eventBus.$on("update:selected", name => {
         if(name===this.name){
           this.active= true
@@ -36,15 +37,18 @@
     },
     methods: {
       xxx() {
-        this.eventBus.$emit("update:selected", this.name);
+        this.eventBus.$emit("update:selected", this.name,this);
       }
     }
   };
 </script>
 <style lang="scss" scoped>
   .z-tabs-item {
-    flex-shrink: 0;
     padding: 0 2em;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     &.active{
       color: red;
     }

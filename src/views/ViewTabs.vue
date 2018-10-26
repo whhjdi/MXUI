@@ -5,7 +5,9 @@
         <z-tabs-item name="a">新闻1</z-tabs-item>
         <z-tabs-item name="b">新闻2</z-tabs-item>
         <z-tabs-item name="c">新闻3</z-tabs-item>
-        <z-button>切换</z-button>
+        <template slot="actions">
+          <z-button>切换</z-button>
+        </template>
       </z-tabs-head>
       <z-tabs-content>
         <z-tabs-pane name="a">1</z-tabs-pane>
@@ -23,7 +25,7 @@
   import ZTabsPane from "../components/ZTabs/ZTabsPane";
   import ZButton from "../components/ZButton/ZButton";
   export default {
-    components:{
+    components: {
       ZTabs,
       ZTabsHead,
       ZTabsItem,
@@ -31,12 +33,11 @@
       ZTabsPane,
       ZButton
     },
-    data () {
+    data() {
       return {
-        selectedTab:'a'
-      }
+        selectedTab: "a"
+      };
     },
-    methods:{
-    }
+    methods: {}
   };
 </script>

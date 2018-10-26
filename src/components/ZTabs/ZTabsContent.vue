@@ -5,13 +5,13 @@
 </template>
 <script>
 export default {
+  name:"ZTabsContent",
   inject:['eventBus']
 }
 </script>
 
 <style lang="scss" scoped>
 .z-tabs-Content{
-  display: flex;
-  justify-content: flex-start
+  margin-top: 5px;
 }
 </style>
