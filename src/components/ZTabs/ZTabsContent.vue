@@ -12,6 +12,10 @@ export default {
 
 <style lang="scss" scoped>
 .z-tabs-Content{
-  margin-top: 5px;
+  min-height: 50px;
+  margin-top: 2em;
+  text-align: left;
+  padding: 0 2em;
 }
+
 </style>

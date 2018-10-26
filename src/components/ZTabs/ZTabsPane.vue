@@ -25,7 +25,7 @@
         }
       }
     },
-    created() {
+    mounted() {
       this.eventBus.$on("update:selected", name => {
         if(name===this.name){
           this.active= true
@@ -36,8 +36,4 @@
     },
   };
 </script>
-<style lang="scss" scoped>
-.active{
-  color: red;
-}
-</style>
+

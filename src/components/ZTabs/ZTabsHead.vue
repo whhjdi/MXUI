@@ -11,16 +11,14 @@
   export default {
     name: "ZTabsHead",
     props: {
-      direction: {
+      color: {
         type: String,
-        default: "horizontal",
-        validator(value) {
-          return ["horizontal", "vertical"].indexOf(value) >= 0;
-        }
+        default: "#3cb1ff"
       }
     },
     inject: ["eventBus"],
     mounted() {
+      this.$refs.line.style.borderBottomColor = this.color;
       this.eventBus.$on("update:selected", (item, vm) => {
         let { width, height, left, top } = vm.$el.getBoundingClientRect();
         this.$refs.line.style.width = `${width}px`;
@@ -42,7 +40,7 @@
     > .line {
       position: absolute;
       bottom: -2px;
-      border-bottom: 2px solid $z-color;
+      border-bottom: 2px solid;
       transition: all 300ms;
     }
     > .actions-wrapper {
