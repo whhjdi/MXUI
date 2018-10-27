@@ -47,27 +47,9 @@
       opacity: 0.7;
     }
     &:active {
-      background: #1899ef;
+      opacity: 1;
+      background: $z-color-black;
     }
-  }
-  //颜色
-  .default {
-    background: $z-button-dafault;
-  }
-  .red {
-    background: $z-button-red;
-  }
-  .yellow {
-    background: $z-button-yellow;
-  }
-  .green {
-    background: $z-button-green;
-  }
-  .black {
-    background: $z-button-black;
-  }
-  .purple {
-    background: $z-button-purple;
   }
   //size
   .normal {
