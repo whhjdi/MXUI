@@ -13,9 +13,11 @@
     methods: {
       showToast() {
         this.$toast("我是toast组件", {
-          text: "关闭",
-          callback(toast) {
-            toast.close();
+          closeButton: {
+            text: "关闭",
+            callback(toast) {
+              toast.close();
+            }
           }
         });
       }
