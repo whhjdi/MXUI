@@ -6,13 +6,14 @@
         <z-tabs-item name="b" activeColor="#3cb1ff">新闻2</z-tabs-item>
         <z-tabs-item name="c" activeColor="#3cb1ff">新闻3</z-tabs-item>
         <template slot="actions">
-          <z-button>放你想放的</z-button>
+          <z-input value="hello world"></z-input>
+          <z-button color="red">搜索</z-button>
         </template>
       </z-tabs-head>
       <z-tabs-content>
-        <z-tabs-pane name="a">hello</z-tabs-pane>
-        <z-tabs-pane name="b">你好</z-tabs-pane>
-        <z-tabs-pane name="c">猴赛雷</z-tabs-pane>
+        <z-tabs-pane name="a">这是我写的tabs组件</z-tabs-pane>
+        <z-tabs-pane name="b">是不是很好看</z-tabs-pane>
+        <z-tabs-pane name="c">五颜六色的组件</z-tabs-pane>
       </z-tabs-content>
     </z-tabs>
     <z-tabs :selected.sync="selectedTab">
@@ -77,9 +78,9 @@
     </z-tabs>
     <z-tabs :selected.sync="selectedTab">
       <z-tabs-head color="#324555">
-        <z-tabs-item name="a" activeColor="#324555">新闻1</z-tabs-item>
-        <z-tabs-item name="b" activeColor="#324555">新闻2</z-tabs-item>
-        <z-tabs-item name="c" activeColor="#324555">新闻3</z-tabs-item>
+        <z-tabs-item name="a" activeColor="#ff7477">新闻1</z-tabs-item>
+        <z-tabs-item name="b" activeColor="#9a83da">新闻2</z-tabs-item>
+        <z-tabs-item name="c" activeColor="#28da99">新闻3</z-tabs-item>
         <template slot="actions">
           <z-button color="black">放你想放的</z-button>
         </template>
@@ -99,6 +100,7 @@
   import ZTabsContent from "../components/ZTabs/ZTabsContent";
   import ZTabsPane from "../components/ZTabs/ZTabsPane";
   import ZButton from "../components/ZButton/ZButton";
+  import ZInput from "../components/ZInput/ZInput";
   export default {
     components: {
       ZTabs,
@@ -106,7 +108,8 @@
       ZTabsItem,
       ZTabsContent,
       ZTabsPane,
-      ZButton
+      ZButton,
+      ZInput
     },
     data() {
       return {

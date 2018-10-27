@@ -2,7 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import  './z-css/normalize.css'
+import plugin from './components/ZToast/plugin';
 Vue.config.productionTip = false
+Vue.use(plugin)
 
 new Vue({
   router,

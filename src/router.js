@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import ViewButton from './views/ViewButton.vue'
 import ViewInput from './views/ViewInput.vue'
 import ViewTabs from './views/ViewTabs.vue'
+import ViewToast from './views/ViewToast.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
       path: '/tabs',
       name: 'tabs',
       component: ViewTabs
+    },
+    {
+      path: '/toast',
+      name: 'toast',
+      component: ViewToast
     },
     // {
     //   path: '/about',

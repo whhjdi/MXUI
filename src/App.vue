@@ -4,6 +4,7 @@
       <router-link to="/" >Button组件</router-link>
       <router-link to="/input">Input组件</router-link>
       <router-link to="/tabs">Tabs组件</router-link>
+      <router-link to="/toast">Toast组件</router-link>
     </div>
     <router-view />
   </div>
