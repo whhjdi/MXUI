@@ -4,6 +4,7 @@ import ViewButton from './views/ViewButton.vue'
 import ViewInput from './views/ViewInput.vue'
 import ViewTabs from './views/ViewTabs.vue'
 import ViewToast from './views/ViewToast.vue'
+import ViewPopover from './views/ViewPopover.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +28,11 @@ export default new Router({
       path: '/toast',
       name: 'toast',
       component: ViewToast
+    },
+    {
+      path: '/popover',
+      name: 'popover',
+      component: ViewPopover
     },
     // {
     //   path: '/about',

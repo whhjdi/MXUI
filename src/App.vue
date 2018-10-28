@@ -5,6 +5,7 @@
       <router-link to="/input">Input组件</router-link>
       <router-link to="/tabs">Tabs组件</router-link>
       <router-link to="/toast">Toast组件</router-link>
+      <router-link to="/popover">popover组件</router-link>
     </div>
     <router-view />
   </div>
