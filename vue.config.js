@@ -1,3 +1,3 @@
 module.exports = {
-  baseUrl: '/ZUI/dist/'
+  baseUrl: './dist/'
 }
