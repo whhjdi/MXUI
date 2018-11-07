@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <z-popover>
       <template slot="content">
         <div>hello</div>
@@ -25,4 +25,7 @@
   };
 </script>
 <style lang="scss" scoped>
+.wrapper{
+  margin-top: 100px;
+}
 </style>
